@@ -1,17 +1,35 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React, { useState } from 'react';
+import { createRoot } from 'react-dom/client';
+import HeadTitle from './components/HeadTitle';
+import Slider from './components/Slider';
+import NavigationBar from './components/NavigationBar';
+import ContactPage from './components/ContactPage';
+import './styles/styles.css';
+import Biography from './components/Biography';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+const App = () => {
+  const [activePage, setActivePage] = useState('slider');
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+  const handlePageChange = (page) => {
+    setActivePage(page);
+  };
+
+  return (
+    <React.StrictMode>
+      <Router>
+        <div className="body-page">
+          <HeadTitle handlePageChange={handlePageChange} />
+          <NavigationBar handlePageChange={handlePageChange} />
+          <Routes>
+            <Route path="/" element={<Slider />} />
+            <Route path="/biography" element={<Biography />} />
+            <Route path="/contact" element={<ContactPage />} />
+          </Routes>
+        </div>
+      </Router>
+    </React.StrictMode>
+  );
+};
+
+createRoot(document.getElementById('root')).render(<App />);
