@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import image1 from '../assets/images/image1.jpeg';
 import image2 from '../assets/images/image2.jpeg';
 import image3 from '../assets/images/image3.jpeg';
@@ -6,21 +6,35 @@ import image4 from '../assets/images/image4.jpeg';
 import image5 from '../assets/images/image5.jpg';
 import image6 from '../assets/images/image6.jpg';
 import image7 from '../assets/images/image7.jpg';
+import image8 from '../assets/images/image8.jpeg';
+import image9 from '../assets/images/image9.jpeg';
+import image10 from '../assets/images/image10.jpeg';
 
 const Slider = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isImageClicked, setIsImageClicked] = useState(false);
 
   const images = [
-    { src: image4, alt: 'Image 4', name: 'Artwork 4', style: 'Still Life', author: 'Pierossi', status: 'Available' },
-    { src: image1, alt: 'Manta Voladora', name: 'MANTA VOLADORA', style: 'Oil on canvas', author: 'Pierossi', status: 'Available' },
-    { src: image2, alt: 'Image 2', name: 'Artwork 2', style: 'Landscape', author: 'Pierossi', status: 'Available' },
-    { src: image3, alt: 'Image 3', name: 'VIVERN FAMILY', style: 'Portrait', author: 'Pierossi', status: 'Available' },
-    { src: image5, alt: 'Espera Con Gato - Óleo sobre canvas 150x200, Loc. Boston USA 2005', name: 'ESPERA CON GATO', style: 'Oil on canvas', author: 'Pierossi', status: 'Sold' },
-    { src: image6, alt: 'Fuga Hacia Andromeda', name: 'FUGA HACIA ANDROMEDA', style: 'Oil on canvas', author: 'Pierossi', status: 'Available' },
-    { src: image7, alt: 'Vitesse', name: 'VITESSE', style: 'Oil on canvas', author: 'Pierossi', status: 'Available' },
+    { src: image4, alt: 'CARNEVALLE CROMATTICO 1.45X1.30cm oil on canvas ', name: 'CARNAVLLE CROMATTICO', style: 'Oil on canvas (1.45x1.30m)', author: 'Pierossi', status: 'Available' },
+    { src: image1, alt: 'Manta Voladora', name: 'MANTA VOLADORA', style: 'Oil on canvas (100X140m)', author: 'Pierossi', status: 'Available' },
+    { src: image2, alt: 'LUNA AZUL  090x140cm oil and canvas', name: 'LUNA AZUL', style: 'Oil on canvas (.90x1.40m)', author: 'Pierossi', status: 'Available' },
+    { src: image3, alt: 'Movimiento crómatico y penumbras (1x1.20m)', name: 'MOVIMIENTO CROMÁTICO Y PENUNBRAS', style: 'Oil on canvas (1x1.20m)', author: 'Pierossi', status: 'Available' },
+    { src: image5, alt: 'Espera Con Gato - Óleo sobre canvas 150x200, Loc. Boston USA 2005', name: 'ESPERA CON GATO', style: 'Oil on canvas (1.5x2m)', author: 'Pierossi', status: 'Sold' },
+    { src: image6, alt: 'FUGA HACIA ANDRÓMEDA- Oíl on canvas/ 150X150m', name: 'FUGA HACIA ANDROMEDA', style: 'Oil on canvas (1.5x1.5m)', author: 'Pierossi', status: 'Available' },
+    { src: image7, alt: 'Vitesse', name: 'VITESSE', style: 'Oil on canvas (1.5x1.5m)', author: 'Pierossi', status: 'Available' },
+    { src: image8, alt: 'LUNA AMARILLA  090x140cm', name: 'LUNA AMARILLA', style: 'Oil on canvas (.90x1.4m)', author: 'Pierossi', status: 'Available' },
+    { src: image9, alt: 'VUELO PARALELO - 1.30X1.30', name: 'VUELO PARALELO', style: 'Oil on canvas (1.30x1.30m)', author: 'Pierossi', status: 'Available' },
+    { src: image10, alt: 'ALASKA -90X1.40cm Oíl on canvas', name: 'ALASKA', style: 'Oil on canvas (0.90x1.40m)', author: 'Pierossi', status: 'Available' },
     // Add more image data as needed
   ];
+
+  const goToNextSlide = useCallback(() => {
+    setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+  }, [images.length]);
+
+  const goToPrevSlide = useCallback(() => {
+    setCurrentImageIndex((prevIndex) => (prevIndex + images.length - 1) % images.length);
+  }, [images.length]);
 
   useEffect(() => {
     const handleKeyDown = (event) => {
@@ -30,22 +44,13 @@ const Slider = () => {
         goToPrevSlide();
       }
     };
-  
+
     document.addEventListener('keydown', handleKeyDown);
-  
+
     return () => {
       document.removeEventListener('keydown', handleKeyDown);
     };
-  }, []);  
-
-  const goToNextSlide = () => {
-    setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-  };
-  
-
-  const goToPrevSlide = () => {
-    setCurrentImageIndex((prevIndex) => (prevIndex + images.length - 1) % images.length);
-  }; 
+  }, [goToNextSlide, goToPrevSlide]);
 
   const handleImageClick = () => {
     setIsImageClicked(true);
@@ -57,39 +62,43 @@ const Slider = () => {
 
   return (
     <div className={`slider ${isImageClicked ? 'image-clicked' : ''}`}>
-      <button className="slider-arrow" onClick={goToPrevSlide}>
-        &lt;
-      </button>
+      <ArrowButton direction="left" onClick={goToPrevSlide} />
       <div className="slider-image-container">
         <img
-          className='slider-image'
+          className="slider-image"
           src={images[currentImageIndex].src}
-          alt={images[currentImageIndex].alt}
+          alt={`Slide ${currentImageIndex + 1}`}
           onClick={handleImageClick}
         />
         <p className="image-name">{images[currentImageIndex].name}</p>
       </div>
       <div className="image-description">
-        <p className="image-details">Style: {images[currentImageIndex].style}</p>
-          <p className='asterisc'>*</p>
-          <p className='image-details'>Author: {images[currentImageIndex].author}</p>
-        <p className='asterisc'>*</p>
+        <p className="image-details">{images[currentImageIndex].style}</p>
+        <p className="asterisc">*</p>
+        <p className="image-details">{images[currentImageIndex].author}</p>
+        <p className="asterisc">*</p>
         <p className="image-status">{images[currentImageIndex].status.toUpperCase()}</p>
       </div>
-      <button className="slider-arrow" onClick={goToNextSlide}>
-        &gt;
-      </button>
+      <ArrowButton direction="right" onClick={goToNextSlide} />
       {isImageClicked && (
         <div className="overlay" onClick={handleOverlayClick}>
           <img
-          className='image-clicked'
-          src={images[currentImageIndex].src}
-          alt={images[currentImageIndex].alt}
-          onClick={handleImageClick}
-        />
+            className="image-clicked"
+            src={images[currentImageIndex].src}
+            alt={`Slide ${currentImageIndex + 1}`}
+            onClick={handleImageClick}
+          />
         </div>
       )}
     </div>
+  );
+};
+
+const ArrowButton = ({ direction, onClick }) => {
+  return (
+    <button className={`slider-arrow ${direction}`} onClick={onClick}>
+      {direction === 'left' ? '<' : '>'}
+    </button>
   );
 };
 
