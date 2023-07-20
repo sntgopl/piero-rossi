@@ -16,7 +16,7 @@ const Slider = () => {
 
   const images = [
     { src: image4, alt: 'CARNEVALLE CROMATTICO 1.45X1.30cm oil on canvas ', name: 'CARNAVLLE CROMATTICO', style: 'Oil on canvas (1.45x1.30m)', author: 'Pierossi', status: 'Available' },
-    { src: image1, alt: 'Manta Voladora', name: 'MANTA VOLADORA', style: 'Oil on canvas (100X140m)', author: 'Pierossi', status: 'Available' },
+    { src: image1, alt: 'Manta Voladora', name: 'MANTA VOLADORA', style: 'Oil on canvas (100x140m)', author: 'Pierossi', status: 'Available' },
     { src: image2, alt: 'LUNA AZUL  090x140cm oil and canvas', name: 'LUNA AZUL', style: 'Oil on canvas (.90x1.40m)', author: 'Pierossi', status: 'Available' },
     { src: image3, alt: 'Movimiento crómatico y penumbras (1x1.20m)', name: 'MOVIMIENTO CROMÁTICO Y PENUNBRAS', style: 'Oil on canvas (1x1.20m)', author: 'Pierossi', status: 'Available' },
     { src: image5, alt: 'Espera Con Gato - Óleo sobre canvas 150x200, Loc. Boston USA 2005', name: 'ESPERA CON GATO', style: 'Oil on canvas (1.5x2m)', author: 'Pierossi', status: 'Sold' },
