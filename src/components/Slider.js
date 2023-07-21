@@ -3,7 +3,7 @@ import image1 from '../assets/images/image1.jpeg';
 import image2 from '../assets/images/image2.jpeg';
 import image3 from '../assets/images/image3.jpeg';
 import image4 from '../assets/images/image4.jpeg';
-import image5 from '../assets/images/image5.jpg';
+// import image5 from '../assets/images/image5.jpg';
 import image6 from '../assets/images/image6.jpg';
 import image7 from '../assets/images/image7.jpg';
 import image8 from '../assets/images/image8.jpeg';
@@ -19,7 +19,7 @@ const Slider = () => {
     { src: image1, alt: 'Manta Voladora', name: 'MANTA VOLADORA', style: 'Oil on canvas (1.00x1.40m)', author: 'Pierossi', status: 'Disponible' },
     { src: image2, alt: 'LUNA AZUL  090x140cm oil and canvas', name: 'LUNA AZUL', style: 'Oil on canvas (.90x1.40m)', author: 'Pierossi', status: 'Disponible' },
     { src: image3, alt: 'Movimiento crómatico y penumbras (1x1.20m)', name: 'MOVIMIENTO CROMÁTICO Y PENUNBRAS', style: 'Oil on canvas (1x1.20m)', author: 'Pierossi', status: 'Disponible' },
-    { src: image5, alt: 'Espera Con Gato - Óleo sobre canvas 150x200, Loc. Boston USA 2005', name: 'ESPERA CON GATO', style: 'Oil on canvas (1.50x2m)', author: 'Pierossi', status: 'Vendido' },
+    // { src: image5, alt: 'Espera Con Gato - Óleo sobre canvas 150x200, Loc. Boston USA 2005', name: 'ESPERA CON GATO', style: 'Oil on canvas (1.50x2m)', author: 'Pierossi', status: 'Vendido' },
     { src: image6, alt: 'FUGA HACIA ANDRÓMEDA- Oíl on canvas/ 150X150m', name: 'FUGA HACIA ANDROMEDA', style: 'Oil on canvas (1.50x1.50m)', author: 'Pierossi', status: 'Disponible' },
     { src: image7, alt: 'Vitesse', name: 'VITESSE', style: 'Oil on canvas (1.50x1.50m)', author: 'Pierossi', status: 'Disponible' },
     { src: image8, alt: 'LUNA AMARILLA  090x140cm', name: 'LUNA AMARILLA', style: 'Oil on canvas (.90x1.40m)', author: 'Pierossi', status: 'Disponible' },
