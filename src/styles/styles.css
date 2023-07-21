@@ -79,7 +79,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid var(--fiv-color);
+  /* border: 1px solid var(--fiv-color); */
 }
 
 .slider-image {
@@ -109,7 +109,7 @@ body {
 }
 
 .image-name {
-  font-size: calc(2vh + 0.5vmin);
+  font-size: calc(2vh);
   margin: 0;
   color: var(--thi-color);
 
@@ -118,7 +118,7 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 10px;
+  /* padding: 10px; */
   text-align: center;
 }
 

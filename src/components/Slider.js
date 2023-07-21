@@ -15,16 +15,16 @@ const Slider = () => {
   const [isImageClicked, setIsImageClicked] = useState(false);
 
   const images = [
-    { src: image4, alt: 'CARNEVALLE CROMATTICO 1.45X1.30cm oil on canvas ', name: 'CARNAVLLE CROMATTICO', style: 'Oil on canvas (1.45x1.30m)', author: 'Pierossi', status: 'Available' },
-    { src: image1, alt: 'Manta Voladora', name: 'MANTA VOLADORA', style: 'Oil on canvas (100x140m)', author: 'Pierossi', status: 'Available' },
-    { src: image2, alt: 'LUNA AZUL  090x140cm oil and canvas', name: 'LUNA AZUL', style: 'Oil on canvas (.90x1.40m)', author: 'Pierossi', status: 'Available' },
-    { src: image3, alt: 'Movimiento crómatico y penumbras (1x1.20m)', name: 'MOVIMIENTO CROMÁTICO Y PENUNBRAS', style: 'Oil on canvas (1x1.20m)', author: 'Pierossi', status: 'Available' },
-    { src: image5, alt: 'Espera Con Gato - Óleo sobre canvas 150x200, Loc. Boston USA 2005', name: 'ESPERA CON GATO', style: 'Oil on canvas (1.5x2m)', author: 'Pierossi', status: 'Sold' },
-    { src: image6, alt: 'FUGA HACIA ANDRÓMEDA- Oíl on canvas/ 150X150m', name: 'FUGA HACIA ANDROMEDA', style: 'Oil on canvas (1.5x1.5m)', author: 'Pierossi', status: 'Available' },
-    { src: image7, alt: 'Vitesse', name: 'VITESSE', style: 'Oil on canvas (1.5x1.5m)', author: 'Pierossi', status: 'Available' },
-    { src: image8, alt: 'LUNA AMARILLA  090x140cm', name: 'LUNA AMARILLA', style: 'Oil on canvas (.90x1.4m)', author: 'Pierossi', status: 'Available' },
-    { src: image9, alt: 'VUELO PARALELO - 1.30X1.30', name: 'VUELO PARALELO', style: 'Oil on canvas (1.30x1.30m)', author: 'Pierossi', status: 'Available' },
-    { src: image10, alt: 'ALASKA -90X1.40cm Oíl on canvas', name: 'ALASKA', style: 'Oil on canvas (0.90x1.40m)', author: 'Pierossi', status: 'Available' },
+    { src: image4, alt: 'CARNEVALLE CROMATTICO 1.45X1.30cm oil on canvas ', name: 'CARNAVLLE CROMATTICO', style: 'Oil on canvas (1.45x1.30m)', author: 'Pierossi', status: 'Disponible' },
+    { src: image1, alt: 'Manta Voladora', name: 'MANTA VOLADORA', style: 'Oil on canvas (1.00x1.40m)', author: 'Pierossi', status: 'Disponible' },
+    { src: image2, alt: 'LUNA AZUL  090x140cm oil and canvas', name: 'LUNA AZUL', style: 'Oil on canvas (.90x1.40m)', author: 'Pierossi', status: 'Disponible' },
+    { src: image3, alt: 'Movimiento crómatico y penumbras (1x1.20m)', name: 'MOVIMIENTO CROMÁTICO Y PENUNBRAS', style: 'Oil on canvas (1x1.20m)', author: 'Pierossi', status: 'Disponible' },
+    { src: image5, alt: 'Espera Con Gato - Óleo sobre canvas 150x200, Loc. Boston USA 2005', name: 'ESPERA CON GATO', style: 'Oil on canvas (1.50x2m)', author: 'Pierossi', status: 'Vendido' },
+    { src: image6, alt: 'FUGA HACIA ANDRÓMEDA- Oíl on canvas/ 150X150m', name: 'FUGA HACIA ANDROMEDA', style: 'Oil on canvas (1.50x1.50m)', author: 'Pierossi', status: 'Disponible' },
+    { src: image7, alt: 'Vitesse', name: 'VITESSE', style: 'Oil on canvas (1.50x1.50m)', author: 'Pierossi', status: 'Disponible' },
+    { src: image8, alt: 'LUNA AMARILLA  090x140cm', name: 'LUNA AMARILLA', style: 'Oil on canvas (.90x1.40m)', author: 'Pierossi', status: 'Disponible' },
+    { src: image9, alt: 'VUELO PARALELO - 1.30X1.30', name: 'VUELO PARALELO', style: 'Oil on canvas (1.30x1.30m)', author: 'Pierossi', status: 'Disponible' },
+    { src: image10, alt: 'ALASKA -90X1.40cm Oíl on canvas', name: 'ALASKA', style: 'Oil on canvas (0.90x1.40m)', author: 'Pierossi', status: 'Disponible' },
     // Add more image data as needed
   ];
 
@@ -73,6 +73,7 @@ const Slider = () => {
         <p className="image-name">{images[currentImageIndex].name}</p>
       </div>
       <div className="image-description">
+        <p className="asterisc">*</p>
         <p className="image-details">{images[currentImageIndex].style}</p>
         <p className="asterisc">*</p>
         <p className="image-details">{images[currentImageIndex].author}</p>
