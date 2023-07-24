@@ -194,6 +194,19 @@ body {
   gap: 15%;
 }
 
+.biography-image-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Adjust the width to control the split point */
+  height: 50%;
+  background-image: url('../assets/images/image8.jpeg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.5; /* Adjust the opacity as desired */
+  z-index: -1;
+}
+
 .biography-image-container {
   width: 40%;
   height: 100%;

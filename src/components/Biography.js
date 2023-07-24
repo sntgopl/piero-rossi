@@ -4,6 +4,7 @@ import piero from '../assets/images/piero.jpeg';
 const Biography = () => {
   return (
     <div className="biography">
+      <div className="biography-image-bg"></div>
       <div className="biography-image-container">
         <img className="biography-image" src={piero} alt="Profile" />
       </div>
