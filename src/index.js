@@ -1,6 +1,5 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import HeadTitle from './components/HeadTitle';
 import Slider from './components/Slider';
 import NavigationBar from './components/NavigationBar';
 import ContactPage from './components/ContactPage';
@@ -14,7 +13,6 @@ const App = () => {
     <React.StrictMode>
       <Router>
         <div className="body-page">
-          <HeadTitle />
           <NavigationBar />
           <Routes>
             <Route path="/" element={<Slider />} />

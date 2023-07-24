@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
+import HeadTitle from './HeadTitle';
 import image1 from '../assets/images/image1.jpeg';
 import image2 from '../assets/images/image2.jpeg';
 import image3 from '../assets/images/image3.jpeg';
@@ -61,6 +62,8 @@ const Slider = () => {
   };
 
   return (
+    <div className="slider-container">
+    <HeadTitle />
     <div className={`slider ${isImageClicked ? 'image-clicked' : ''}`}>
       <ArrowButton direction="left" onClick={goToPrevSlide} />
       <div className="slider-image-container">
@@ -91,6 +94,7 @@ const Slider = () => {
           />
         </div>
       )}
+    </div>
     </div>
   );
 };

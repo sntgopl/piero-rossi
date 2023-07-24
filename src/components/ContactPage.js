@@ -18,20 +18,21 @@ const ContactPage = () => {
       });
 
       if (response.ok) {
-        setSuccessMessage('Your form has been sent.');
+        setSuccessMessage('Su solicitud ha sido enviada.');
         form.reset();
       } else {
-        setSuccessMessage('There was an error sending your form. Please try again later.');
+        setSuccessMessage('Hubo un error al enviar su formulario. Por favor, inténtalo de nuevo más tarde.');
       }
     } catch (error) {
-      setSuccessMessage('There was an error sending your form. Please try again later.');
+      setSuccessMessage('Hubo un error al enviar su formulario. Por favor, inténtalo de nuevo más tarde.');
     }
   };
 
   return (
     <div className="form-container">
+      <div className="biography-image-bg"></div>
       <h2 className="form-title">Contacto</h2>
-      <p className='form-subtitle'>Si encuentra interés en una de estas obras, puede usted comunicarse aquí</p>
+      <p className='form-subtitle'>Si encuentra interés en una de estas obras, puede usted comunicarse aquí:</p>
       {successMessage && <p className="success-message">{successMessage}</p>}
 
       <form onSubmit={handleSubmit}>
