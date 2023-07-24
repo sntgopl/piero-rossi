@@ -183,6 +183,43 @@ body {
   text-decoration: underline;
 }
 
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form label {
+  font-size: calc(2vh + 1vmin);
+  color: var(--thi-color); /* Make sure to define this custom CSS variable */
+}
+
+form input,
+form textarea {
+  width: 80%;
+  padding: 8px;
+  margin: 5px 0;
+  font-size: calc(1.5vh + 1vmin);
+}
+
+form textarea {
+  resize: vertical;
+}
+
+form button[type="submit"] {
+  background-color: var(--thi-color); /* Make sure to define this custom CSS variable */
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: calc(2vh + 1vmin);
+  cursor: pointer;
+}
+
+form button[type="submit"]:hover {
+  background-color: #1a4766; /* Change the color on hover if desired */
+}
+
 .biography {
   position: absolute;
   margin-top: 30vh;
