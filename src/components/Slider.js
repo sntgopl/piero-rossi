@@ -76,7 +76,6 @@ const Slider = () => {
         <p className="image-name">{images[currentImageIndex].name}</p>
       </div>
       <div className="image-description">
-        <p className="asterisc">*</p>
         <p className="image-details">{images[currentImageIndex].style}</p>
         <p className="asterisc">*</p>
         <p className="image-details">{images[currentImageIndex].author}</p>

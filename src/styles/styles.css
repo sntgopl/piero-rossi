@@ -195,7 +195,7 @@ form {
 }
 
 form label {
-  font-size: calc(2vh + 1vmin);
+  font-size: calc(1.5vh + 1vmin);
   color: var(--thi-color); /* Make sure to define this custom CSS variable */
 }
 
@@ -205,6 +205,7 @@ form textarea {
   padding: 8px;
   margin: 5px 0;
   font-size: calc(1.5vh + 1vmin);
+  border: none;
 }
 
 form textarea {
@@ -214,15 +215,15 @@ form textarea {
 form button[type="submit"] {
   background-color: var(--thi-color); /* Make sure to define this custom CSS variable */
   color: #fff;
-  padding: 10px 15px;
+  padding: 5px 10px;
   border: none;
-  border-radius: 5px;
-  font-size: calc(2vh + 1vmin);
+  border-radius: 3px;
+  font-size: calc(1.5vh + 1vmin);
   cursor: pointer;
 }
 
 form button[type="submit"]:hover {
-  background-color: #1a4766; /* Change the color on hover if desired */
+  background-color: var(--fiv-color); /* Change the color on hover if desired */
 }
 
 .biography {
@@ -272,6 +273,7 @@ form button[type="submit"]:hover {
   justify-content: center;
   font-family: 'Times New Roman', Times, serif;
   padding-bottom: 10vh;
+  text-align: center;
 }
 
 .biography-text h2 {
@@ -359,6 +361,23 @@ form button[type="submit"]:hover {
 
 @media (min-width: 768px) and (max-width: 1023px) {
   /* Add your responsive styles here */
+
+  .biography-text {
+    text-align: center;
+  }
+
+  .navigation-bar {
+    padding-right: 15px;
+  }
+
+  .nav-button {
+    font-size: calc(1.5vh + 1vmin);
+  }
+
+  .form-subtitle {
+    font-size: calc(1.5vh + 1vmin);
+    padding: 0 20px; ;
+  }
 }
 
 @media (max-width: 480px) {
@@ -380,8 +399,19 @@ form button[type="submit"]:hover {
     height: 100%;
   }
 
+  .biography-image-container {
+    width: 60%;
+  }
+
+  .biography-image {
+    position: relative;
+    width: 100%;
+    top: 55px;
+  }
+
   .biography-text {
     width: 70%;
+    text-align: center;
   }
 
   .navigation-bar {
@@ -389,7 +419,9 @@ form button[type="submit"]:hover {
   }
   
   .menu-items {
-    background-color: rgba(161, 118, 27, 0.95);
+    background-image: url('../assets/images/image8.jpeg');
+    background-size:cover;
+    background-position: center;
     top: 0;
     left: 0;
     right: 0;
