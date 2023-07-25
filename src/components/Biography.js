@@ -11,7 +11,7 @@ const Biography = () => {
       <div className="biography-text">
         <h2>Pierossi</h2>
         <p>
-        Piero Rossi pintor italiano, autodidacta sus obras no tienen tendencias puras, se recrea de forma constante y pulsa aplicaciones poco frecuentes. Así el artista pasa de lo figurativo hacia lo abstracto en el año 2010. Este cambio ha sido un hito importante en su trayectoria artística, permitiéndose explorar nuevas dimensiones. Su materia favorita es el oleo sobre lienzo, aunque ocasionalmente trabaja en oleo sobre tabla.
+        Piero Rossi pintor italiano, autodidacta sus obras no tienen tendencias puras, se recrea de forma constante y pulsa aplicaciones poco frecuentes. Así el artista pasa de lo figurativo hacia lo abstracto en el año 2010. Este cambio ha sido un hito importante en su trayectoria artística, permitiéndose explorar nuevas dimensiones. Su materia favorita es el óleo sobre lienzo, aunque ocasionalmente trabaja en óleo sobre tabla.
         </p>
       </div>
     </div>

@@ -400,13 +400,13 @@ form button[type="submit"]:hover {
   }
 
   .biography-image-container {
-    width: 60%;
+    width: 80%;
   }
 
   .biography-image {
     position: relative;
     width: 100%;
-    top: 55px;
+    top: 77px;
   }
 
   .biography-text {
@@ -442,6 +442,7 @@ form button[type="submit"]:hover {
     color: #fff; 
     font-size: 25px;
     text-decoration: none;
+    text-shadow: 2px 2px 3px #000;
   }
 
   .line {
