@@ -419,8 +419,8 @@ form button[type="submit"]:hover {
   }
   
   .menu-items {
-    background-image: url('../assets/images/image8.jpeg');
-    background-size:cover;
+    background-image: url('../assets/images/image890.jpeg');
+    background-size: cover;
     background-position: center;
     top: 0;
     left: 0;
@@ -442,7 +442,12 @@ form button[type="submit"]:hover {
     color: #fff; 
     font-size: 25px;
     text-decoration: none;
-    text-shadow: 2px 2px 3px #000;
+    text-shadow: 1px 1px 1px #000;
+  }
+
+  .nav-button:hover {
+    color: var(--thi-color);
+    text-shadow: none;
   }
 
   .line {
