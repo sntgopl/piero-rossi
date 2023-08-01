@@ -412,6 +412,7 @@ form button[type="submit"]:hover {
   .biography-text {
     width: 70%;
     text-align: center;
+    padding-bottom: 0;
   }
 
   .navigation-bar {
