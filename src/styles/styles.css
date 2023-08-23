@@ -240,7 +240,7 @@ form button[type="submit"]:hover {
 }
 
 .biography-image-bg {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 50%; /* Adjust the width to control the split point */
