@@ -45,7 +45,9 @@ body {
 }
  
 .head-title-image {
-    height: 20vh;
+  position: relative;
+  top: 20px;
+    height: 30vh;
 }
 
 .slider {
@@ -59,20 +61,20 @@ body {
 }
 
 .slider-arrow {
-  background-image: radial-gradient(var(--main-color), white);
-  opacity: 0.5;
+  background: none;
+  opacity: 0.8;
   border: none;
-  color: var(--sec-color);
+  color: black;
   border-radius: 33px;
   padding: 15px;
   margin: 0 10px;
-  font-size: calc(2vh);
+  font-size: calc(5vh);
   cursor: pointer;
 }
 
 .slider-arrow:hover {
-  color: #fff;
-  border: 1px solid var(--fou-color);
+  color: black;
+  /* border: 1px solid var(--fou-color); */
 }
 
 .slider-image-container {
@@ -229,7 +231,6 @@ form button[type="submit"]:hover {
 .biography {
   position: absolute;
   left: 0;
-  padding: 50px 0;
   width: 100%;
   max-height: 100%;
   display: flex;
@@ -253,6 +254,8 @@ form button[type="submit"]:hover {
 }
 
 .biography-image-container {
+  position: relative;
+  top: 30px;
   width: 40%;
   height: 100%;
   display: flex;
@@ -314,7 +317,7 @@ form button[type="submit"]:hover {
 .line {
   width: 100%;
   height: 2px;
-  background-color: var(--fou-color);
+  background-color: black;
   opacity: 0.7;
   transition: background-color 0.3s ease-in-out;
 }
@@ -341,7 +344,7 @@ form button[type="submit"]:hover {
 
 .nav-button {
   width: 10vw;
-  color: var(--fiv-color);
+  color: black;
   opacity: 0.7;
   background: none;
   border: none;
@@ -350,14 +353,13 @@ form button[type="submit"]:hover {
   font-size: 20px;
   cursor: pointer;
   font-family: 'Times New Roman', Times, serif;
+  text-decoration: none;
   z-index: 2;
 }
 
 .nav-button:hover {
-  /* background-color: rgba(224, 165, 38, 0.5); */
-  background-image: radial-gradient(rgba(224, 165, 38, 0.5), white);
-  color: var(--thi-color);
-  border-radius: 150px;
+  text-decoration: underline;
+  color: black;
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {

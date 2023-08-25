@@ -1,5 +1,5 @@
 import React from 'react';
-import firmap from '../assets/images/firmap.jpeg';
+import firmap from '../assets/images/fondo.png';
 import { Link } from 'react-router-dom';
 
 const HeadTitle = ({ handlePageChange }) => {
