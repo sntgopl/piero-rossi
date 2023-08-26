@@ -16,7 +16,7 @@ const Slider = () => {
   const [isImageClicked, setIsImageClicked] = useState(false);
 
   const images = [
-    { src: image4, alt: 'CARNEVALLE CROMATTICO 1.45X1.30cm oil on canvas ', name: 'CARNAVLLE CROMATTICO', style: 'Oil on canvas (1.45x1.30m)', author: 'Pierossi', status: 'Disponible' },
+    { src: image4, alt: 'CARNEVALLE CROMATTICO 1.45X1.30cm oil on canvas ', name: 'CARNAVALLE CROMATTICO', style: 'Oil on canvas (1.45x1.30m)', author: 'Pierossi', status: 'Disponible' },
     { src: image1, alt: 'Manta Voladora', name: 'MANTA VOLADORA', style: 'Oil on canvas (1.00x1.40m)', author: 'Pierossi', status: 'Disponible' },
     { src: image2, alt: 'LUNA AZUL  090x140cm oil and canvas', name: 'LUNA AZUL', style: 'Oil on canvas (.90x1.40m)', author: 'Pierossi', status: 'Disponible' },
     { src: image3, alt: 'Movimiento crómatico y penumbras (1x1.20m)', name: 'MOVIMIENTO CROMÁTICO Y PENUMBRAS', style: 'Oil on canvas (1x1.20m)', author: 'Pierossi', status: 'Disponible' },
